@@ -5,20 +5,20 @@
 class Autoproof < Formula
   desc "command-line interface for automatic code & content protection"
   homepage "https://github.com/Autoproof/homebrew-autoproof"
-  version "0.1.4"
+  version "0.1.5"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/Autoproof/cli/releases/download/v0.1.4/autoproofcli_Darwin_x86_64.tar.gz"
-      sha256 "c8c98e0de7050f784cc1a57e2fa3cee075408703a959ca2c0954056127bad990"
+    if Hardware::CPU.arm?
+      url "https://github.com/Autoproof/cli/releases/download/v0.1.5/autoproofcli_Darwin_arm64.tar.gz"
+      sha256 "ebbab8317401e9ed85ed6111eda00444039bdf26ecdabff24b9fa6cc7c795410"
 
       def install
         bin.install "autoproofcli"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/Autoproof/cli/releases/download/v0.1.4/autoproofcli_Darwin_arm64.tar.gz"
-      sha256 "d3f209832f3627459be12f1e104486e09aa078e1329d545f810a8767bb6df08c"
+    if Hardware::CPU.intel?
+      url "https://github.com/Autoproof/cli/releases/download/v0.1.5/autoproofcli_Darwin_x86_64.tar.gz"
+      sha256 "2dd10a4d4770a06e7e9df3d14c6d4293b444f5774b7d0a8fa780befb6c9d51ae"
 
       def install
         bin.install "autoproofcli"
@@ -28,16 +28,16 @@ class Autoproof < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Autoproof/cli/releases/download/v0.1.4/autoproofcli_Linux_arm64.tar.gz"
-      sha256 "1a1a9cd5305f23f2e86f242e6f0fa92ff7ab967ddb6c67a6505c982563898a45"
+      url "https://github.com/Autoproof/cli/releases/download/v0.1.5/autoproofcli_Linux_arm64.tar.gz"
+      sha256 "d012e526dc61d8e48d6b8cfb5352e15714e3570033d237b66990aa3857bfe245"
 
       def install
         bin.install "autoproofcli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Autoproof/cli/releases/download/v0.1.4/autoproofcli_Linux_x86_64.tar.gz"
-      sha256 "134cfded2b1e3b60022fc25f6a191abaf0e3c9ae7f7abe2ff82584e5a7f9d280"
+      url "https://github.com/Autoproof/cli/releases/download/v0.1.5/autoproofcli_Linux_x86_64.tar.gz"
+      sha256 "a6dfc874fedbe56b6720bd242c96dddc21b6a72bf0f2cc5e8235bd4c938935b3"
 
       def install
         bin.install "autoproofcli"
