@@ -5,20 +5,20 @@
 class Autoproof < Formula
   desc "command-line interface for automatic code & content protection"
   homepage "https://github.com/Autoproof/homebrew-autoproof"
-  version "0.1.7"
+  version "0.1.8"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Autoproof/cli/releases/download/v0.1.7/autoproofcli_Darwin_x86_64.tar.gz"
-      sha256 "2ff7505ce1a5515737c439e4eb15f64387b12b10487ffcf58ea08642f0fea077"
+      url "https://github.com/Autoproof/cli/releases/download/v0.1.8/autoproofcli_Darwin_x86_64.tar.gz"
+      sha256 "dac17b2f6c95717444f97f9bbbedf7776ab49399fc54370bc2d39bdb3412e50f"
 
       def install
         bin.install "autoproofcli"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Autoproof/cli/releases/download/v0.1.7/autoproofcli_Darwin_arm64.tar.gz"
-      sha256 "920191dba763980e9804869912e99ed6759055717913af7aa9b5d9d9c74e050e"
+      url "https://github.com/Autoproof/cli/releases/download/v0.1.8/autoproofcli_Darwin_arm64.tar.gz"
+      sha256 "0ef387dffdf5059d11ab5632a9e27607e0cfa1bd94b7102b7e22c33375361cf7"
 
       def install
         bin.install "autoproofcli"
@@ -28,16 +28,16 @@ class Autoproof < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Autoproof/cli/releases/download/v0.1.7/autoproofcli_Linux_arm64.tar.gz"
-      sha256 "127ed160eadf9c8907995a4e95a4c312edc9cf15be8eb142b1bc33c5ba9e25a8"
+      url "https://github.com/Autoproof/cli/releases/download/v0.1.8/autoproofcli_Linux_arm64.tar.gz"
+      sha256 "b025d629a871c929c65f79247a8abab09a91d4b3861cbdddf1c4b5448e4eae5d"
 
       def install
         bin.install "autoproofcli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Autoproof/cli/releases/download/v0.1.7/autoproofcli_Linux_x86_64.tar.gz"
-      sha256 "7c5511ea91e7f5304def6917e96543f97328821fa80b04b948d8d07b7aced686"
+      url "https://github.com/Autoproof/cli/releases/download/v0.1.8/autoproofcli_Linux_x86_64.tar.gz"
+      sha256 "2b0847a3469dd6404fb6364f7fecf428f1811dc9176896eb0aab1a2b9c318788"
 
       def install
         bin.install "autoproofcli"
